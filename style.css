@@ -1,3 +1,4 @@
+/* every page */
 *{
     box-sizing: border-box;
 }
@@ -6,6 +7,12 @@ body{
     padding: 0;
     font-family: 'Raleway', sans-serif;
 }
+.home-page{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+/* navbar */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -13,11 +20,11 @@ body{
     background-color: #5d4954;
     color: white;
     position:fixed;
+    top: 0;
     width: 100%;
-    z-index: 3;
 }
 .brand-title{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     letter-spacing: 5px;
     margin: .5rem;
     font-weight: 700;
@@ -27,8 +34,8 @@ body{
     color: white;
 }
 .brand-title:hover{
-
     background-color: #8a8a8a;
+    
 }
 .navbar-links ul{
     margin: 0;
@@ -64,6 +71,7 @@ body{
     background-color: white;
     border-radius: 10px;
 }
+/* mobile responsive */
 @media (max-width: 700px) {
     .toggle-button{
         display: flex;
@@ -89,46 +97,52 @@ body{
         display: flex;
     }
 }
-
+/* content for page */
 .hero{
     background: url('./bwpic.jpg');
-    height: 100vh;
-    position: relative;
+    z-index: -1;
+    position: fixed;
+    top: 63px;
+    width: 100%;
+    height: 680px;          
     opacity: .8;
     border-bottom: 1px solid black;
 }
 .content{
-    position: relative;
-    /* top: 100px; */
-    height: 100vh;
+    position: fixed;
+    width: 100%;    
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .content p{
     font-size: 60px;
-    padding: .5em;
     font-weight: bolder;
     text-shadow: 3px 3px 20px #ff99cc,
     -2px 1px 30px #ff99cc;
 }
 @media screen and (max-width:940px){
-    .content{
-        /* padding: 0; */
-    }
     .content p{
-        padding: 0;
+        padding: .3rem;
         margin: .3rem;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 }
+/* my footer */
 footer{
-    height: 50px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #5d4954;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 footer p{
     color: rgb(226,226,226);
